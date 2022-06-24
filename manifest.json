@@ -1,0 +1,22 @@
+{
+  "manifest_version": 2,
+  "name": "WhatsApp Helper",
+  "short_name": "WaHlp",
+  "icons":{
+      "128": "logo.png"
+  }, 
+  "browser_action":{
+    "default_popup": "index.html"
+  },
+  "version": "0.1",
+  "description": "A simple extension to know the number of group members in a whatsapp group",
+  "content_scripts": [
+      {
+          "matches": [
+              "http://web.whatsapp.com/*",
+              "https://web.whatsapp.com/*"
+          ],
+          "js": ["popup.js"]
+      }
+  ]
+}
